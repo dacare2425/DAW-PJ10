@@ -3,12 +3,10 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'aplicacio',
+  templateUrl: './home.component.html',
+  styleUrls: ['./energias-renovables.component.css'],
   standalone: true,
-  imports: [RouterModule],
-  templateUrl: './index.component.html',
-  styleUrls: ['./energias-renovables.component.css']
-  
 })
-export class IndexComponent {
+export class HomeComponent {
 
 }
