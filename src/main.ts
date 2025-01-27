@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { HomeComponent } from './app/home.component';
+import { HomeComponent } from './app/home/home.component';
 import { BiomassaComponent } from './app/biomassa/biomassa.component';
 import { HidraulicaComponent } from './app/hidraulica/hidraulica.component';
 import { SolarComponent } from './app/solar/solar.component';
