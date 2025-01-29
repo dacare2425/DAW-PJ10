@@ -1,4 +1,20 @@
 <main>
+    <div class="container">
+        <div class="column" *ngFor="let component of components; let i = index">
+          <div class="inner">
+            <div class="front">
+              <p>{{ component.name }}</p>
+              <button (click)="rotateColumn(i)">Rotar</button>
+            </div>
+            
+            <div class="back">
+              <p>Información adicional sobre {{ component.name }}</p>
+              <button [routerLink]="component.link">Ir a {{ component.name }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     <section class="router-outlet"></section>
     
     <section class="about-section light-background">

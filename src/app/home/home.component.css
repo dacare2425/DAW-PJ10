@@ -148,3 +148,95 @@ main p, main ul {
     width: 50%;
     height: auto;
 }
+/* Contenedor de las cartas */
+.container {
+    display: grid; /* Usamos CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Las columnas se ajustan automáticamente, con un tamaño mínimo de 250px */
+    gap: 1.2rem; /* Espacio de 1.2rem entre las cartas */
+    margin-top: 20px;
+    padding: 1rem; /* Padding general alrededor del contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  }
+  
+  /* Estilo para cada columna (carta) */
+  .column {
+    display: grid; /* Usamos grid en cada carta para que el contenido se ajuste de manera flexible */
+    height: auto; /* La altura se ajustará automáticamente al contenido */
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem; /* Padding dentro de cada carta */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total de la carta */
+  }
+  
+  /* Contenido interno de cada carta (para aplicar la rotación) */
+  .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  /* Rotación de la carta cuando se activa la clase 'rotated' */
+  .column.rotated .inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Parte frontal y posterior de la carta */
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: #f3f3f3;
+  }
+  
+  /* Parte posterior de la carta, rota 180 grados */
+  .back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Estilo para el botón de rotación */
+  button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el botón de redirección */
+  button[routerLink] {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[routerLink]:hover {
+    background-color: #218838;
+  }
+  

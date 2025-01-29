@@ -12,7 +12,6 @@ import { Component } from '@angular/core';
           <a routerLink="/hidraulica" routerLinkActive="active">Hidráulica</a>
           <a routerLink="/solar" routerLinkActive="active">Solar</a>
           <a routerLink="/eolica" routerLinkActive="active">Eólica</a>
-          <a routerLink="/cartas" routerLinkActive="active">Cartas</a>
         </nav>
       </div>
     </header>
@@ -30,7 +29,6 @@ import { Component } from '@angular/core';
     color: #333;
 }
 
-/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
