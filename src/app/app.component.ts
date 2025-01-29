@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
           <a routerLink="/solar" routerLinkActive="active">Solar</a>
           <a routerLink="/eolica" routerLinkActive="active">Eólica</a>
           <a routerLink="/cartas" routerLinkActive="active">Cartas</a>
+          <a routerLink="/buscador" routerLinkActive="active">Buscador</a>
         </nav>
       </div>
     </header>

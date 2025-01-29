@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './biomassa.component.css'
 })
 export class BiomassaComponent {
-
+  
 }
