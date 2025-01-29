@@ -1,16 +1,19 @@
 import { Routes } from '@angular/router';
-import { ESolarComponent } from './solar.component';
-import { EBiomasaComponent } from './biomasa.component';
-import { EEolicaComponent } from './eolica.component';
-import { EHidraulicaComponent } from './hidraulica.component';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './home/home.component';
+import { BiomassaComponent } from './biomassa/biomassa.component';
+import { HidraulicaComponent } from './hidraulica/hidraulica.component';
+import { SolarComponent } from './solar/solar.component';
+import { EolicaComponent } from './eolica/eolica.component';
+import { CartasComponent } from './cartas/cartas.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 
-
-export const routes: Routes = [
-    {path: 'home', component: HomeComponent},
-    {path: 'solar', component: ESolarComponent},
-    {path: 'biomasa', component: EBiomasaComponent},
-    {path: 'eolica', component: EEolicaComponent},
-    {path: 'hidraulica', component: EHidraulicaComponent},
-    {path: '', redirectTo: '/index', pathMatch: 'full'}
+export const appRoutes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'biomassa', component: BiomassaComponent},
+  { path: 'hidraulica', component: HidraulicaComponent},
+  { path: 'solar', component: SolarComponent},
+  { path: 'eolica', component: EolicaComponent},
+  { path: 'cartas', component: CartasComponent},
+  {path: 'buscador', component: BuscadorComponent}
 ];

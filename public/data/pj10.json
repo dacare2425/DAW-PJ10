@@ -1,0 +1,1270 @@
+{
+  "paises": [
+    "Europe", "12 countries",
+    {
+      "nombre": "Islandia",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 10000,
+          "plantas_principales": [
+            "Planta Solar Reykjavik"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 50000,
+          "plantas_principales": [
+            "Parque Eólico Hellisheiði"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 120000,
+          "plantas_principales": [
+            "Central Hidroeléctrica Blanda",
+            "Central Hidroeléctrica Fljótsdalur"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 5000,
+          "plantas_principales": [
+            "Planta de Biomasa Akureyri"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 200000,
+        "dependencia_combustibles_fosiles": "Muy baja",
+        "politicas_necesarias": [
+          "Promoción de investigación en energías renovables",
+          "Ampliación de infraestructura para almacenamiento de energía"
+        ],
+        "beneficios": {
+          "economicos": "Reducción de costos energéticos y creación de empleos verdes",
+          "medioambientales": "Preservación de ecosistemas y reducción de emisiones de CO2",
+          "sociales": "Mayor independencia energética y mejora de la calidad de vida"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "description"
+      }
+    },
+    {
+      "nombre": "Irlanda",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 20000,
+          "plantas_principales": [
+            "Parque Solar Cork"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 70000,
+          "plantas_principales": [
+            "Parque Eólico Arklow Bank"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 15000,
+          "plantas_principales": [
+            "Central Hidroeléctrica Erne"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 10000,
+          "plantas_principales": [
+            "Planta de Biomasa Shannon"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 150000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Incentivos para vehículos eléctricos",
+          "Expansión de proyectos eólicos offshore"
+        ],
+        "beneficios": {
+          "economicos": "Incremento de inversiones extranjeras en energía",
+          "medioambientales": "Disminución de contaminantes atmosféricos",
+          "sociales": "Creación de nuevas oportunidades laborales"
+        }
+      }
+    },
+    {
+      "nombre": "Reino Unido",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 100000,
+          "plantas_principales": [
+            "Parque Solar West Raynham"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 250000,
+          "plantas_principales": [
+            "Parque Eólico Hornsea",
+            "Parque Eólico Dogger Bank"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 40000,
+          "plantas_principales": [
+            "Central Hidroeléctrica Dinorwig"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 120000,
+          "plantas_principales": [
+            "Planta de Biomasa Drax"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 500000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Subsidios para energías renovables",
+          "Regulaciones más estrictas para industrias contaminantes"
+        ],
+        "beneficios": {
+          "economicos": "Diversificación del sector energético y estabilidad a largo plazo",
+          "medioambientales": "Protección de recursos naturales",
+          "sociales": "Reducción de la pobreza energética"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "description"
+      }
+    },
+    {
+      "nombre": "Noruega",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 8000,
+          "plantas_principales": [
+            "Planta Solar Oslo"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 60000,
+          "plantas_principales": [
+            "Parque Eólico Fosen"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 200000,
+          "plantas_principales": [
+            "Central Hidroeléctrica Rjukan",
+            "Central Hidroeléctrica Suldal"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 15000,
+          "plantas_principales": [
+            "Planta de Biomasa Bergen"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 300000,
+        "dependencia_combustibles_fosiles": "Baja",
+        "politicas_necesarias": [
+          "Exportación de tecnologías limpias",
+          "Desarrollo de energía geotérmica"
+        ],
+        "beneficios": {
+          "economicos": "Liderazgo en el mercado energético europeo",
+          "medioambientales": "Conservación de la biodiversidad",
+          "sociales": "Fortalecimiento de la economía local"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "description"
+      }
+    },
+    {
+      "nombre": "Suecia",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 50000,
+          "plantas_principales": [
+            "Planta Solar Värmland"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 180000,
+          "plantas_principales": [
+            "Parque Eólico Markbygden"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 160000,
+          "plantas_principales": [
+            "Central Hidroeléctrica Harsprånget"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 100000,
+          "plantas_principales": [
+            "Planta de Biomasa Örnsköldsvik"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 400000,
+        "dependencia_combustibles_fosiles": "Baja",
+        "politicas_necesarias": [
+          "Fomentar la electrificación del transporte",
+          "Subvenciones a la investigación de nuevas tecnologías renovables"
+        ],
+        "beneficios": {
+          "economicos": "Crecimiento del sector energético renovable",
+          "medioambientales": "Reducción significativa de las emisiones de carbono",
+          "sociales": "Mejoras en la calidad del aire y en la salud pública"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "description"
+      }
+    },
+    {
+      "nombre": "España",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 35000000,
+          "plantas_principales": [
+            "Planta Solar de Andasol",
+            "Planta Solar de Cervera"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 55000000,
+          "plantas_principales": [
+            "Parque Eólico El Andévalo",
+            "Parque Eólico Maranchón"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 30000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Aldeadávila",
+            "Central Hidroeléctrica de Mequinenza"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 8000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Sangüesa"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 75000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Ampliación de infraestructura de energía renovable",
+          "Promoción de autoconsumo y comunidades energéticas"
+        ],
+        "beneficios": {
+          "economicos": "Incremento en exportaciones de tecnología verde",
+          "medioambientales": "Reducción de contaminación y emisiones",
+          "sociales": "Creación de empleo en zonas rurales"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Plantas de energía renovable en España"
+      }
+    },
+    {
+      "nombre": "Grecia",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Parque Solar Helios"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 20000000,
+          "plantas_principales": [
+            "Parque Eólico de Kafireas"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 7000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Aliakmon"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 2000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Drama"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 25000000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Mejorar incentivos para energía renovable",
+          "Reducir dependencia de lignito"
+        ],
+        "beneficios": {
+          "economicos": "Aumento del turismo sostenible",
+          "medioambientales": "Protección de la biodiversidad",
+          "sociales": "Reducción de costes energéticos para la población"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Plantas renovables en Grecia"
+      }
+    },
+    {
+      "nombre": "Austria",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Planta Solar de Nickelsdorf"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Parque Eólico de Burgenland"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 60000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Kaprun",
+            "Central Hidroeléctrica de Freudenau"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 5000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Güssing"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 45000000,
+        "dependencia_combustibles_fosiles": "Baja",
+        "politicas_necesarias": [
+          "Inversión en almacenamiento energético",
+          "Fomentar la electrificación del transporte"
+        ],
+        "beneficios": {
+          "economicos": "Menor dependencia de importaciones energéticas",
+          "medioambientales": "Reducción significativa de emisiones",
+          "sociales": "Impulso al desarrollo rural"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energía hidroeléctrica en Austria"
+      }
+    },
+    {
+      "nombre": "Suiza",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 10000000,
+          "plantas_principales": [
+            "Planta Solar Monte Rosa"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 2000000,
+          "plantas_principales": [
+            "Parque Eólico de Juvent"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 58000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Grimsel",
+            "Central Hidroeléctrica de Grand Dixence"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 3000000,
+          "plantas_principales": [
+            "Planta de Biomasa Zürich"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 35000000,
+        "dependencia_combustibles_fosiles": "Muy baja",
+        "politicas_necesarias": [
+          "Aumentar la capacidad solar en techos urbanos",
+          "Inversión en redes inteligentes"
+        ],
+        "beneficios": {
+          "economicos": "Mayor estabilidad energética",
+          "medioambientales": "Protección de los Alpes",
+          "sociales": "Innovación tecnológica y calidad de vida"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Hidroeléctrica en Suiza"
+      }
+    },
+    {
+      "nombre": "Alemania",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 60000000,
+          "plantas_principales": [
+            "Planta Solar de Neuhardenberg"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 120000000,
+          "plantas_principales": [
+            "Parque Eólico del Mar del Norte"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 22000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Goldisthal"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 40000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Straubing"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 200000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Ampliación de la energía eólica marina",
+          "Fomento de la economía circular"
+        ],
+        "beneficios": {
+          "economicos": "Liderazgo en exportaciones tecnológicas",
+          "medioambientales": "Reducción de emisiones globales",
+          "sociales": "Avances en movilidad sostenible"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energías renovables en Alemania"
+      }
+    },
+    {
+      "nombre": "Portugal",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Planta Solar de Amareleja"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 20000000,
+          "plantas_principales": [
+            "Parque Eólico de Alto Minho"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 14000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Alqueva"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 4000000,
+          "plantas_principales": [
+            "Planta de Biomasa Mortágua"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 35000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Reforzar interconexiones energéticas",
+          "Impulsar investigación en energía oceánica"
+        ],
+        "beneficios": {
+          "economicos": "Fortalecimiento del sector exportador energético",
+          "medioambientales": "Conservación de áreas naturales",
+          "sociales": "Mejora de acceso a energía limpia"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Renovables en Portugal"
+      }
+    },
+    "Asia", "5 countries", 
+    {
+      "nombre": "Tailandia",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Planta Solar Lopburi",
+            "Planta Solar Nakhon Ratchasima"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 5000000,
+          "plantas_principales": [
+            "Parque Eólico Theppana"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 8000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Sirindhorn"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Chonburi"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 30000000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Ampliar las inversiones en energía solar y eólica",
+          "Reducir la dependencia de combustibles fósiles importados"
+        ],
+        "beneficios": {
+          "economicos": "Reducción de costes de importación energética",
+          "medioambientales": "Preservación de los ecosistemas tropicales",
+          "sociales": "Creación de empleos en zonas rurales"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energías renovables en Tailandia"
+      }
+    },
+    {
+      "nombre": "India",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 100000000,
+          "plantas_principales": [
+            "Parque Solar Bhadla",
+            "Parque Solar Pavagada"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 60000000,
+          "plantas_principales": [
+            "Parque Eólico Muppandal"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 140000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Bhakra",
+            "Central Hidroeléctrica de Tehri"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 30000000,
+          "plantas_principales": [
+            "Planta de Biomasa Punjab"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 500000000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Fomentar la electrificación de zonas rurales",
+          "Incrementar la eficiencia energética en el sector industrial"
+        ],
+        "beneficios": {
+          "economicos": "Reducción de la pobreza energética",
+          "medioambientales": "Reducción de contaminación del aire",
+          "sociales": "Mayor acceso a energía limpia para millones de personas"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Infraestructura energética en India"
+      }
+    },
+    {
+      "nombre": "Japón",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 75000000,
+          "plantas_principales": [
+            "Planta Solar de Kagoshima",
+            "Planta Solar de Oita"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Parque Eólico de Setana"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 90000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Kurobe",
+            "Central Hidroeléctrica de Okutadami"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 25000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Hokkaido"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 180000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Reactivación segura de plantas nucleares",
+          "Desarrollar tecnologías de almacenamiento de energía"
+        ],
+        "beneficios": {
+          "economicos": "Reducción de costes energéticos a largo plazo",
+          "medioambientales": "Protección de las zonas costeras",
+          "sociales": "Mayor resiliencia frente a desastres naturales"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Plantas renovables en Japón"
+      }
+    },
+    {
+      "nombre": "China",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 400000000,
+          "plantas_principales": [
+            "Parque Solar Tengger",
+            "Parque Solar de Huanghe"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 350000000,
+          "plantas_principales": [
+            "Parque Eólico Jiuquan",
+            "Parque Eólico Gansu"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 1200000000,
+          "plantas_principales": [
+            "Presa de las Tres Gargantas",
+            "Central Hidroeléctrica de Baihetan"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 70000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Shandong"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 1500000000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Transición acelerada hacia energías limpias",
+          "Inversión en redes de transporte sostenibles"
+        ],
+        "beneficios": {
+          "economicos": "Fortalecimiento del liderazgo global en renovables",
+          "medioambientales": "Mejora de la calidad del aire en ciudades",
+          "sociales": "Acceso a energía sostenible para millones de habitantes"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Infraestructura energética en China"
+      }
+    },
+    {
+      "nombre": "Filipinas",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 5000000,
+          "plantas_principales": [
+            "Planta Solar de Negros Occidental"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 3000000,
+          "plantas_principales": [
+            "Parque Eólico de Bangui"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Magat"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 4000000,
+          "plantas_principales": [
+            "Planta de Biomasa Isabela"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 25000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Promoción de energía solar para comunidades insulares",
+          "Inversión en sistemas de energía resilientes"
+        ],
+        "beneficios": {
+          "economicos": "Menor dependencia de importaciones de energía",
+          "medioambientales": "Protección de ecosistemas marinos",
+          "sociales": "Aumento del acceso a energía en zonas remotas"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Renovables en Filipinas"
+      }
+    },
+    "North America", "5 countries",
+    {
+      "nombre": "Estados Unidos",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 350000000,
+          "plantas_principales": [
+            "Parque Solar Topaz (California)",
+            "Parque Solar Copper Mountain (Nevada)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 450000000,
+          "plantas_principales": [
+            "Parque Eólico de Roscoe (Texas)",
+            "Parque Eólico Alta Wind Energy Center (California)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 300000000,
+          "plantas_principales": [
+            "Presa Hoover (Nevada-Arizona)",
+            "Central Hidroeléctrica de Grand Coulee (Washington)"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 70000000,
+          "plantas_principales": [
+            "Planta de Biomasa Gainesville (Florida)"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 800000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Expansión de redes inteligentes",
+          "Incentivos fiscales para energía renovable"
+        ],
+        "beneficios": {
+          "economicos": "Generación de empleos en energías limpias",
+          "medioambientales": "Reducción significativa de emisiones de CO2",
+          "sociales": "Mayor seguridad energética"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Infraestructura renovable en Estados Unidos"
+      }
+    },
+    {
+      "nombre": "Canadá",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 10000000,
+          "plantas_principales": [
+            "Planta Solar Sarnia (Ontario)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 35000000,
+          "plantas_principales": [
+            "Parque Eólico Rivière-du-Moulin (Quebec)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 400000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Churchill Falls (Terranova y Labrador)",
+            "Presa de Beauharnois (Quebec)"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Prince George (Columbia Británica)"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 200000000,
+        "dependencia_combustibles_fosiles": "Baja",
+        "politicas_necesarias": [
+          "Inversión en almacenamiento de energía renovable",
+          "Implementación de estándares más estrictos de eficiencia energética"
+        ],
+        "beneficios": {
+          "economicos": "Exportación de energía limpia a Estados Unidos",
+          "medioambientales": "Preservación de áreas naturales",
+          "sociales": "Impulso a comunidades rurales con empleo verde"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Renovables en Canadá"
+      }
+    },
+    {
+      "nombre": "Cuba",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 200000,
+          "plantas_principales": [
+            "Parque Solar Cayo Coco"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 100000,
+          "plantas_principales": [
+            "Parque Eólico Gibara"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 300000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Hanabanilla"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 500000,
+          "plantas_principales": [
+            "Planta de Biomasa Ciro Redondo"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 1000000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Desarrollo de infraestructuras solares en zonas rurales",
+          "Colaboración internacional para financiamiento de renovables"
+        ],
+        "beneficios": {
+          "economicos": "Menor dependencia de petróleo importado",
+          "medioambientales": "Reducción de contaminación en áreas urbanas",
+          "sociales": "Mejora de acceso a energía limpia en zonas remotas"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energía renovable en Cuba"
+      }
+    },
+    {
+      "nombre": "México",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 30000000,
+          "plantas_principales": [
+            "Parque Solar Villanueva (Coahuila)",
+            "Planta Solar Puerto Libertad (Sonora)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 20000000,
+          "plantas_principales": [
+            "Parque Eólico de La Ventosa (Oaxaca)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 45000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Chicoasén (Chiapas)"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 7000000,
+          "plantas_principales": [
+            "Planta de Biomasa de Nuevo León"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 150000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Aumentar inversiones en renovables en el norte del país",
+          "Fortalecer marcos legales para promover energías limpias"
+        ],
+        "beneficios": {
+          "economicos": "Desarrollo de zonas industriales sostenibles",
+          "medioambientales": "Protección de ecosistemas costeros y selvas",
+          "sociales": "Ampliación del acceso a energía asequible"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Renovables en México"
+      }
+    },
+    {
+      "nombre": "Las Bahamas",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 50000,
+          "plantas_principales": [
+            "Planta Solar de Bimini"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 10000,
+          "plantas_principales": [
+            "Parque Eólico de Eleuthera"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 0,
+          "plantas_principales": []
+        },
+        "biomasa": {
+          "produccion_total_MWh": 20000,
+          "plantas_principales": [
+            "Planta de Biomasa de Nassau"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 50000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Promoción de microgrids solares en islas pequeñas",
+          "Inversión en resiliencia energética frente a huracanes"
+        ],
+        "beneficios": {
+          "economicos": "Reducción de gastos en importación de combustibles",
+          "medioambientales": "Protección de los arrecifes coralinos",
+          "sociales": "Acceso estable a energía para comunidades remotas"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energía renovable en las Bahamas"
+      }
+    },
+    "South America", "3 countries",
+    {
+      "nombre": "Brasil",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 25000000,
+          "plantas_principales": [
+            "Parque Solar Pirapora (Minas Gerais)",
+            "Planta Solar Coremas (Paraíba)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 65000000,
+          "plantas_principales": [
+            "Parque Eólico Lagoa do Barro (Piauí)",
+            "Parque Eólico Osório (Rio Grande do Sul)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 370000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Itaipú (Paraná)",
+            "Central Hidroeléctrica de Belo Monte (Pará)"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 90000000,
+          "plantas_principales": [
+            "Planta de Biomasa de São Paulo",
+            "Planta de Biomasa de Mato Grosso"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 400000000,
+        "dependencia_combustibles_fosiles": "Baja",
+        "politicas_necesarias": [
+          "Ampliar el desarrollo de energía eólica en el noreste",
+          "Fortalecer la inversión en energía solar en áreas rurales"
+        ],
+        "beneficios": {
+          "economicos": "Liderazgo regional en renovables",
+          "medioambientales": "Protección de la Amazonía mediante uso de energías limpias",
+          "sociales": "Expansión de la electrificación en áreas aisladas"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energía renovable en Brasil"
+      }
+    },
+    {
+      "nombre": "Argentina",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 5000000,
+          "plantas_principales": [
+            "Parque Solar Cauchari (Jujuy)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Parque Eólico de Rawson (Chubut)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 30000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Yacyretá (Misiones)",
+            "Central Hidroeléctrica de Salto Grande (Entre Ríos)"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 3000000,
+          "plantas_principales": [
+            "Planta de Biomasa Santa Fe"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 50000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Desarrollar proyectos solares en la Puna",
+          "Ampliar la capacidad eólica en la Patagonia"
+        ],
+        "beneficios": {
+          "economicos": "Reducción de costes de importación energética",
+          "medioambientales": "Disminución de la contaminación urbana",
+          "sociales": "Mayor acceso a energía en comunidades rurales"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energías limpias en Argentina"
+      }
+    },
+    {
+      "nombre": "Chile",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 25000000,
+          "plantas_principales": [
+            "Parque Solar Cerro Dominador (Atacama)",
+            "Planta Solar El Romero (Atacama)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 9000000,
+          "plantas_principales": [
+            "Parque Eólico San Gabriel (La Araucanía)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Ralco (Biobío)"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 2000000,
+          "plantas_principales": [
+            "Planta de Biomasa Coronel (Biobío)"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 60000000,
+        "dependencia_combustibles_fosiles": "Baja",
+        "politicas_necesarias": [
+          "Fomentar el uso de hidrógeno verde",
+          "Mejorar la infraestructura de transmisión energética"
+        ],
+        "beneficios": {
+          "economicos": "Competitividad en exportación de energía limpia",
+          "medioambientales": "Reducción de emisiones de carbono en minería",
+          "sociales": "Mejor calidad de vida en comunidades locales"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energía renovable en Chile"
+      }
+    },
+    "Africa", "3 countries",
+    {
+      "nombre": "Marruecos",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Complejo Solar Noor (Ouarzazate)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 8000000,
+          "plantas_principales": [
+            "Parque Eólico de Tarfaya"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 7000000,
+          "plantas_principales": [
+            "Central Hidroeléctrica de Bin el Ouidane"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 1000000,
+          "plantas_principales": [
+            "Planta de Biomasa Kenitra"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 30000000,
+        "dependencia_combustibles_fosiles": "Moderada",
+        "politicas_necesarias": [
+          "Mejorar la conexión energética con Europa",
+          "Promover la inversión privada en renovables"
+        ],
+        "beneficios": {
+          "economicos": "Posicionamiento como exportador de energía limpia",
+          "medioambientales": "Mitigación de la desertificación",
+          "sociales": "Creación de empleos en zonas rurales"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Renovables en Marruecos"
+      }
+    },
+    {
+      "nombre": "Egipto",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 14000000,
+          "plantas_principales": [
+            "Parque Solar Benban (Asuán)"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 12000000,
+          "plantas_principales": [
+            "Parque Eólico Zafarana (Mar Rojo)"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 15000000,
+          "plantas_principales": [
+            "Presa de Asuán"
+          ]
+        },
+        "biomasa": {
+          "produccion_total_MWh": 2000000,
+          "plantas_principales": [
+            "Planta de Biomasa Giza"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 70000000,
+        "dependencia_combustibles_fosiles": "Alta",
+        "politicas_necesarias": [
+          "Ampliar la capacidad de almacenamiento energético",
+          "Fomentar proyectos eólicos en el desierto oriental"
+        ],
+        "beneficios": {
+          "economicos": "Ahorro en costes de energía a largo plazo",
+          "medioambientales": "Reducción de emisiones en grandes ciudades",
+          "sociales": "Mayor acceso a energía en áreas remotas"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Energía renovable en Egipto"
+      }
+    },
+    {
+      "nombre": "Libia",
+      "energia": {
+        "solar": {
+          "produccion_total_MWh": 500000,
+          "plantas_principales": [
+            "Planta Solar Sabha"
+          ]
+        },
+        "eolica": {
+          "produccion_total_MWh": 200000,
+          "plantas_principales": [
+            "Parque Eólico Derna"
+          ]
+        },
+        "hidraulica": {
+          "produccion_total_MWh": 0,
+          "plantas_principales": []
+        },
+        "biomasa": {
+          "produccion_total_MWh": 50000,
+          "plantas_principales": [
+            "Planta de Biomasa Trípoli"
+          ]
+        }
+      },
+      "impacto": {
+        "reduccion_gases_invernadero_tonCO2": 500000,
+        "dependencia_combustibles_fosiles": "Muy Alta",
+        "politicas_necesarias": [
+          "Inversiones internacionales en renovables",
+          "Desarrollo de estrategias para uso de energía solar"
+        ],
+        "beneficios": {
+          "economicos": "Diversificación económica",
+          "medioambientales": "Reducción de emisiones en áreas urbanas",
+          "sociales": "Progreso en infraestructura energética"
+        }
+      },
+      "imagen": {
+        "src": "link",
+        "desc": "Renovables en Libia"
+      }
+    }
+  ]
+}

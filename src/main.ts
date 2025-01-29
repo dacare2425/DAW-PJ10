@@ -1,12 +1,23 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { ESolarComponent } from './app/solar.component';
-import { EBiomasaComponent } from './app/biomasa.component';
-import { EEolicaComponent } from './app/eolica.component';
-import { EHidraulicaComponent } from './app/hidraulica.component';
-import { HomeComponent } from './app/home.component';
-import { IndexComponent } from './app/index.component';
+import { appRoutes } from './app/app.routes';
 
-bootstrapApplication(IndexComponent, appConfig)
-  .catch((err) => console.error(err));
+
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));

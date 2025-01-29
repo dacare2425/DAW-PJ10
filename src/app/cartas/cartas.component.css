@@ -1,0 +1,31 @@
+/* rotate-columns.component.css */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.column {
+    width: 100px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.rotated {
+    transform: rotateY(90deg);
+}

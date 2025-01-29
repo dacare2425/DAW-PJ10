@@ -1,28 +1,4 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  template: `
-    <header>
-      <div class="header-left">
-        <img src="img/logo.jpg" alt="Logo">
-        <nav>
-          <a routerLink="/" routerLinkActive="active">Home</a>
-          <a routerLink="/biomassa" routerLinkActive="active">Biomasa</a>
-          <a routerLink="/hidraulica" routerLinkActive="active">Hidráulica</a>
-          <a routerLink="/solar" routerLinkActive="active">Solar</a>
-          <a routerLink="/eolica" routerLinkActive="active">Eólica</a>
-          <a routerLink="/cartas" routerLinkActive="active">Cartas</a>
-          <a routerLink="/buscador" routerLinkActive="active">Buscador</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  `,
-  styles: [`
-    body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -171,7 +147,4 @@ main p, main ul {
 .canvaImg {
     width: 50%;
     height: auto;
-}`
-]
-})
-export class AppComponent {}
+}
