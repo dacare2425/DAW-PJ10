@@ -1,1 +1,16 @@
-<p>buscador works!</p>
+<div>
+  <!-- <label for="search">Buscar:</label> -->
+  <input id="search" type="text" [(ngModel)]="textInput" placeholder="Buscar país">
+  <button (click)="buscar()">Buscar</button>
+
+  <div id="data">
+    <pre>{{paisesFiltrados}}</pre>
+  </div>
+
+  <ul>
+    <!-- <li *ngFor="let pais of paisesFiltrados">
+      {{ pais.nombre }},
+      {{ pais.energia}}
+    </li> -->
+  </ul>
+</div>
