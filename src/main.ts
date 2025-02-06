@@ -5,23 +5,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
 import { appConfig } from './app/app.config';
+import { MaterialComponent } from './app/material-design/material-design.component';
 
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
-
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//   ],
-//   imports: [
-//     BrowserModule,
-//     RouterModule.forRoot(routes)
-//   ],
-//   providers: [],
-//   bootstrap: [AppComponent]
-// })
-// class AppModule {}
-
-// platformBrowserDynamic().bootstrapModule(AppModule)
-//   .catch(err => console.error(err));

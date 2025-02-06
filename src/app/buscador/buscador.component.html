@@ -7,10 +7,24 @@
     <pre>{{paisesFiltrados}}</pre>
   </div>
 
-  <!-- <ul>
-    <li *ngFor="let pais of paisesFiltrados">
-      {{ pais.nombre }},
-      {{ pais.energia}}
-    </li>
-  </ul> -->
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>País</mat-label>
+      <input matInput aria-label="País" [matAutocomplete]="auto" [formControl]="countCtrl">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name">
+          <img alt="" class="example-option-img" [src]="country.flag" height="25">
+          <span>{{ country.name }}</span> |
+          <small>Población: {{ country.population }}</small>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <br>
+
+    <mat-slide-toggle [checked]="countCtrl.disabled"
+      (change)="countCtrl.disabled ? countCtrl.enable() : countCtrl.disable()">
+      Desactivar entrada?
+    </mat-slide-toggle>
+  </form>
 </div>

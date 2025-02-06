@@ -1,0 +1,48 @@
+<main> 
+    <mat-chip-option *ngFor="let fish of fishes"
+    [ngStyle]="{'background-color': fish.selected ? '#008000' : '#d3d3d3', 'color': fish.selected ? 'white' : 'black'}"
+    (click)="toggleSelection(fish)">
+{{ fish.name }}
+</mat-chip-option>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>State</mat-label>
+          <input matInput
+                 aria-label="State"
+                 [matAutocomplete]="auto"
+                 [formControl]="stateCtrl">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+              <img alt="" class="example-option-img" [src]="state.flag" height="25">
+              <span>{{state.name}}</span> |
+              <small>Population: {{state.population}}</small>
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      
+        <br>
+      
+        <mat-slide-toggle
+          [checked]="stateCtrl.disabled"
+          (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
+          Disable Input?
+        </mat-slide-toggle>
+      </form>
+      
+      <mat-list>
+        <mat-list-item>Item 1</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Item 2</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Item 3</mat-list-item>
+      </mat-list>
+
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="First">Content 1</mat-tab>
+        <mat-tab label="Second">Content 2</mat-tab>
+        <mat-tab label="Third">Content 3</mat-tab>
+      </mat-tab-group>
+    
+      
+</main>

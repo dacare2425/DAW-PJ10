@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {routes} from './app.routes';
+// import {routes} from './app.routes';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +17,7 @@ import {routes} from './app.routes';
           <a routerLink="/solar" routerLinkActive="active">Solar</a>
           <a routerLink="/eolica" routerLinkActive="active">Eólica</a>
           <a routerLink="/buscador" routerLinkActive="active">Buscador</a>
+          <a routerLink="/material" routerLinkActive="active">Material</a>
         </nav>
       </div>
     </header>
