@@ -1,0 +1,30 @@
+.custom-input-container mat-form-field {
+    background-color: #00796b;
+    border-radius: 5px;
+    padding: 8px;
+    width: 30%;
+}
+.custom-input-container mat-label {
+    color: black;
+}
+.custom-input-container input.mat-input-element {
+    background-color: white !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.custom-input-container mat-option{
+    background-color: #00796b !important; /* Cambia el color de fondo */
+    color: white !important; /* Cambia el color del texto */
+  
+}
+
+.button{
+    background-color: #00796b;
+    color: white !important;
+    
+}
+.input{
+    background-color:white !important;
+}

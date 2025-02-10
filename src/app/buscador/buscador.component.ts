@@ -14,6 +14,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -37,7 +38,8 @@ export interface Country {
     MatOptionModule,
     MatListModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule
   ],
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.css'
@@ -49,6 +51,7 @@ export class BuscadorComponent {
   countCtrl = new FormControl('');
   filteredCountries: Observable<Country[]>;
   countries = countries;
+  isActive: boolean = false;
 
   constructor() {
     console.log(this.jsonData);
@@ -62,9 +65,22 @@ export class BuscadorComponent {
     return this.countries.filter(country => country.name.toLowerCase().includes(filterValue));
   }
 
+  onKeydown(event: KeyboardEvent): void {
+    this.isActive = true;
+    if (event.key === 'Tab') {
+      const filtered = this._filterCountries(this.countCtrl.value || '');
+      if (filtered.length === 1) {
+        this.countCtrl.setValue(filtered[0].name);
+        event.preventDefault(); 
+      }
+    }
+  } 
+
+
   buscar() {
-    console.log("Buscando: ", this.textInput);
-    const resultado = this.filtraPais(this.textInput);
+    const paisBuscado = this.countCtrl.value ?? '';
+    console.log("Buscando: ", paisBuscado);
+    const resultado = this.filtraPais(paisBuscado);
     this.paisesFiltrados = JSON.stringify(resultado, null, 2);
     console.log(resultado);
   }

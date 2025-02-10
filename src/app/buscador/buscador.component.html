@@ -1,30 +1,32 @@
 <div>
   <!-- <label for="search">Buscar:</label> -->
-  <input id="search" type="text" [(ngModel)]="textInput" placeholder="Buscar país">
-  <button (click)="buscar()">Buscar</button>
-
-  <div id="data">
-    <pre>{{paisesFiltrados}}</pre>
-  </div>
+  <!-- <input id="search" type="text" [(ngModel)]="textInput" placeholder="Buscar país"> -->
 
   <form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>País</mat-label>
-      <input matInput aria-label="País" [matAutocomplete]="auto" [formControl]="countCtrl">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name">
-          <img alt="" class="example-option-img" [src]="country.flag" height="25">
-          <span>{{ country.name }}</span> |
-          <small>Población: {{ country.population }}</small>
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
+    <div class="custom-input-container">
+      <mat-form-field appearance="fill" [ngClass]="{'custom-input': isActive}">
+        <mat-label>País</mat-label>
+        <input class="input" #inputElement matInput aria-label="Country" [matAutocomplete]="auto" [formControl]="countCtrl"
+          (keydown)="onKeydown($event)"> <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name">
+            <img alt="" [src]="country.flag" height="25">
+            <span>{{ country.name }}</span> |
+            <small>Población: {{ country.population }}</small>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      
+      <button mat-stroked-button class="button" (click)="buscar()" >Buscar</button>
 
-    <br>
+      <br>
+    </div>
 
     <mat-slide-toggle [checked]="countCtrl.disabled"
       (change)="countCtrl.disabled ? countCtrl.enable() : countCtrl.disable()">
       Desactivar entrada?
     </mat-slide-toggle>
   </form>
+  <div id="data">
+    <pre>{{paisesFiltrados}}</pre>
+  </div>
 </div>
