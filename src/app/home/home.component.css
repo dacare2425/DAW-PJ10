@@ -1,13 +1,10 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #f5f7fa, #c3cfe2); 
-    height: 200vw;
     color: #333;
 }
-
 
 header {
     display: flex;
@@ -28,7 +25,6 @@ a {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 a:hover {
     background-color: #ffffff;
@@ -52,7 +48,6 @@ a[href='/solar']:hover {
     background-color: #ffeb3b;
 }
 
-
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -60,19 +55,25 @@ a[href='/solar']:hover {
     margin-top: 20px;
     padding: 1rem;
     width: 100%;
+    max-height: 70vh; /* Limita la altura total */
+    overflow-y: auto; /* Permite scroll si hay muchas cartas */
 }
 
 .column {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.2rem;
-    box-sizing: border-box;
+    padding: 7rem;
     position: relative;
     perspective: 1000px;
     cursor: pointer;
-    height: 300px;
-    text-align: center;
+    min-height: 250px; /* Ajustado para que sea más flexible */
+    margin: 10px;
+        min-height: 250px; /* Tamaño mínimo */
+        max-height: 400px; /* Tamaño máximo */
+        flex: 1; /* Se ajusta sin desbordar */
+    
+    
 }
 
 .biomassa .front {
@@ -91,30 +92,34 @@ a[href='/solar']:hover {
     background: linear-gradient(135deg, #ffeb3b, #ff9800);  
 }
 
-.column.biomassa .inner.flipped .back {
+.column .inner.flipped .back {
+    background-size: cover;
+    background-position: center;
+}
+
+.biomassa .back {
     background-image: url('https://plus.unsplash.com/premium_photo-1661963248027-3da17337e464?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmlvbWFzc3xlbnwwfHwwfHx8MA%3D%3D');
     background-size: cover;
     background-position: center;
 }
 
-.column.eolica .inner.flipped .back {
+.eolica .back {
     background-image: url('https://images.unsplash.com/photo-1587168173357-99c7e95fb5cd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9saW5vJTIwZGUlMjB2aWVudG98ZW58MHx8MHx8fDA%3D');
     background-size: cover;
     background-position: center;
 }
 
-.column.hidraulica .inner.flipped .back {
+.hidraulica .back {
     background-image: url('https://evolution.skf.com/wp-content/uploads/sites/5/2023/04/gettyimages-1467740391.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.column.solar .inner.flipped .back {
+.solar .back {
     background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjBwYW5lbHxlbnwwfHwwfHx8MA%3D%3D');
     background-size: cover;
     background-position: center;
 }
-
 
 .inner {
     width: 100%;
@@ -131,13 +136,15 @@ a[href='/solar']:hover {
 .front, .back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    padding: 15px;
 }
 
 .front {
@@ -148,7 +155,6 @@ a[href='/solar']:hover {
 .back {
     transform: rotateY(180deg);
 }
-
 
 button {
     margin-top: 1rem;
@@ -168,7 +174,6 @@ button.rotate-button:hover {
     background-color: #004d40;
 }
 
-
 button[routerLink] {
     background-color: #00796b;
     color: white;
@@ -178,14 +183,12 @@ button[routerLink]:hover {
     background-color: #004d40;
 }
 
-
 .column .front p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .column .front::after {
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.";
     font-size: 1rem;
     color: #555;
     margin-top: 10px;
@@ -193,10 +196,10 @@ button[routerLink]:hover {
     line-height: 1.5;
 }
 
-
 .about-section {
     padding: 50px 0;
     text-align: center;
+    margin-top: 30px; /* Espacio extra entre las cartas y la sección */
 }
 
 .about-section img {
@@ -236,4 +239,46 @@ button[routerLink]:hover {
     font-size: 1.2rem;
     color: #555;
     line-height: 1.6;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.info h3 {
+    color: #00796b;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info ul {
+    padding-left: 20px;
+}
+
+.info li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
 }

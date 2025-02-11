@@ -1,61 +1,118 @@
 <main>
-    <div class="container">
-      <div class="column" *ngFor="let component of components; let i = index" [ngClass]="component.name.toLowerCase()">
-        <div class="inner" [ngClass]="{'flipped': component.isFlipped}">
-  
-          <div class="front">
-            <p class="name">{{ component.name }}</p>
-            <button class="button rotate-button" (click)="rotateColumn(i)">Rotar</button>
-          </div>
-  
-          <div class="back">
-            <p>Información adicional sobre {{ component.name }}</p>
-            <button class="button" [routerLink]="component.link">Ir a {{ component.name }}</button>
-            <button class="button rotate-button" (click)="rotateColumn(i)">Volver</button>
-          </div>
+  <div class="container">
+    <div class="column" *ngFor="let component of components; let i = index" [ngClass]="component.name.toLowerCase()">
+      <div class="inner" [ngClass]="{'flipped': component.isFlipped}">
+
+        <div class="front">
+
+          <ng-container [ngSwitch]="component.name">
+            <div *ngSwitchCase="'Biomassa'" class="info">
+              <h3>Biomassa</h3>
+              <p>La biomasa es materia orgánica utilizada como fuente de energía. Se obtiene de residuos agrícolas,
+                forestales y urbanos.</p>
+              <ul>
+                <li>Fuente renovable y sostenible.</li>
+                <li>Reduce la dependencia de combustibles fósiles.</li>
+                <li>Puede generar electricidad y biocombustibles.</li>
+              </ul>
+            </div>
+
+            <div *ngSwitchCase="'Eolica'" class="info">
+              <h3>Energía Eólica</h3>
+              <p>La energía eólica aprovecha la fuerza del viento para generar electricidad mediante aerogeneradores.
+              </p>
+              <ul>
+                <li>No emite gases contaminantes.</li>
+                <li>Bajo impacto ambiental.</li>
+                <li>Depende de la velocidad del viento.</li>
+              </ul>
+            </div>
+
+            <div *ngSwitchCase="'Hidraulica'" class="info">
+              <h3>Energía Hidráulica</h3>
+              <p>La energía hidráulica utiliza el movimiento del agua para producir electricidad en centrales
+                hidroeléctricas.</p>
+              <ul>
+                <li>Fuente de energía constante y confiable.</li>
+                <li>Puede almacenar energía en embalses.</li>
+                <li>Impacto ambiental en ecosistemas acuáticos.</li>
+              </ul>
+            </div>
+
+            <div *ngSwitchCase="'Solar'" class="info">
+              <h3>Energía Solar</h3>
+              <p>La energía solar se obtiene del sol y se convierte en electricidad mediante paneles fotovoltaicos.</p>
+              <ul>
+                <li>Fuente inagotable y accesible.</li>
+                <li>Requiere inversión inicial en paneles solares.</li>
+                <li>Funciona mejor en zonas con alta radiación solar.</li>
+              </ul>
+            </div>
+
+            <div *ngSwitchDefault class="info">
+              <h3>Información General</h3>
+              <p>Las energías renovables son esenciales para un futuro sostenible, reduciendo la contaminación y la
+                dependencia de combustibles fósiles.</p>
+            </div>
+          </ng-container>
+
+
+          <button class="button rotate-button" (click)="rotateColumn(i)">Rotar</button>
         </div>
+
+        <div class="back">
+          <p>Información adicional sobre {{ component.name }}</p>
+          <button class="button" [routerLink]="component.link">Ir a {{ component.name }}</button>
+          <button class="button rotate-button" (click)="rotateColumn(i)">Volver</button>
+        </div>
+
       </div>
     </div>
-  
-    <section class="router-outlet"></section>
-  
-    <section class="about-section light-background">
-      <div class="about-content reverse">
-        <img src="https://www.icontec.org/wp-content/uploads/2021/08/energia.jpg" alt="Historical Factors">
-        <div>
-          <h2>Importancia de las energias renovables</h2>
-          <p>A lo largo de la historia, eventos como guerras, pandemias y desastres naturales...</p>
-        </div>
+  </div>
+
+
+  <section class="router-outlet"></section>
+
+  <section class="about-section light-background">
+    <div class="about-content reverse">
+      <img src="https://www.icontec.org/wp-content/uploads/2021/08/energia.jpg" alt="Historical Factors">
+      <div>
+        <h2>Importancia de las energias renovables</h2>
+        <p>A lo largo de la historia, eventos como guerras, pandemias y desastres naturales...</p>
       </div>
-    </section>
-  
-    <section class="about-section dark-background">
-      <div class="about-content">
-        <img src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/assets/2016/11/25972/image770x420cropped.jpg" alt="Economic Factors">
-        <div>
-          <h2>Gases de efecto invernadero y depencia al combustible fósil</h2>
-          <p>El crecimiento económico de un país influye directamente en su crecimiento poblacional...</p>
-        </div>
+    </div>
+  </section>
+
+  <section class="about-section dark-background">
+    <div class="about-content">
+      <img
+        src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/assets/2016/11/25972/image770x420cropped.jpg"
+        alt="Economic Factors">
+      <div>
+        <h2>Gases de efecto invernadero y depencia al combustible fósil</h2>
+        <p>El crecimiento económico de un país influye directamente en su crecimiento poblacional...</p>
       </div>
-    </section>
-  
-    <section class="about-section light-background">
-      <div class="about-content reverse">
-        <img src="https://elbiensocial.org/wp-content/uploads/2018/08/descubriendo-los-objetivos-del-desarrollo-sostenible.jpg" alt="Cultural Factors">
-        <div>
-          <h2>Transicion a un modelo más sostenible</h2>
-          <p>Las creencias y valores culturales desempeñan un papel central en las decisiones sobre el tamaño de las familias...</p>
-        </div>
+    </div>
+  </section>
+
+  <section class="about-section light-background">
+    <div class="about-content reverse">
+      <img src="https://www.sostenibilidad.com/media/816156/desarrollo-sostenible.jpg" alt="Cultural Factors">
+      <div>
+        <h2>Transicion a un modelo más sostenible</h2>
+        <p>Las creencias y valores culturales desempeñan un papel central en las decisiones sobre el tamaño de las
+          familias...</p>
       </div>
-    </section>
-  
-    <section class="about-section dark-background">
-      <div class="about-content">
-        <img src="https://daniperezmalaga.es/wp-content/uploads/acciones-sostenibles-en-accion.jpg" alt="Technological Factors">
-        <div>
-          <h2>Beneficios</h2>
-          <p>El avance tecnológico ha sido uno de los motores más poderosos del crecimiento poblacional...</p>
-        </div>
+    </div>
+  </section>
+
+  <section class="about-section dark-background">
+    <div class="about-content">
+      <img src="https://eadic.com/wp-content/uploads/2018/02/Bombilla-1.jpg" alt="Technological Factors">
+      <div>
+        <h2>Beneficios</h2>
+        <p>El avance tecnológico ha sido uno de los motores más poderosos del crecimiento poblacional...</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
