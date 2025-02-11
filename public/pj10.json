@@ -1,7 +1,9 @@
 {
   "paises": [
-    "Europe", "11 countries",
+    "Europe",
+    "11 countries",
     {
+      "continente": "Europe",
       "nombre": "Islandia",
       "energia": {
         "solar": {
@@ -49,6 +51,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Irlanda",
       "energia": {
         "solar": {
@@ -91,6 +94,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Reino Unido",
       "energia": {
         "solar": {
@@ -138,6 +142,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Noruega",
       "energia": {
         "solar": {
@@ -185,6 +190,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Suecia",
       "energia": {
         "solar": {
@@ -231,6 +237,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "España",
       "energia": {
         "solar": {
@@ -280,6 +287,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Grecia",
       "energia": {
         "solar": {
@@ -326,6 +334,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Austria",
       "energia": {
         "solar": {
@@ -373,6 +382,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Suiza",
       "energia": {
         "solar": {
@@ -420,6 +430,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Alemania",
       "energia": {
         "solar": {
@@ -466,6 +477,7 @@
       }
     },
     {
+      "continente": "Europe",
       "nombre": "Portugal",
       "energia": {
         "solar": {
@@ -511,8 +523,10 @@
         "desc": "Renovables en Portugal"
       }
     },
-    "Asia", "5 countries", 
+    "Asia",
+    "5 countries",
     {
+      "continente": "Asia",
       "nombre": "Tailandia",
       "energia": {
         "solar": {
@@ -560,6 +574,7 @@
       }
     },
     {
+      "continente": "Asia",
       "nombre": "India",
       "energia": {
         "solar": {
@@ -608,6 +623,7 @@
       }
     },
     {
+      "continente": "Asia",
       "nombre": "Japón",
       "energia": {
         "solar": {
@@ -656,6 +672,7 @@
       }
     },
     {
+      "continente": "Asia",
       "nombre": "China",
       "energia": {
         "solar": {
@@ -705,6 +722,7 @@
       }
     },
     {
+      "continente": "Asia",
       "nombre": "Filipinas",
       "energia": {
         "solar": {
@@ -750,8 +768,10 @@
         "desc": "Renovables en Filipinas"
       }
     },
-    "North America", "5 countries",
+    "North America",
+    "5 countries",
     {
+      "continente": "North America",
       "nombre": "Estados Unidos",
       "energia": {
         "solar": {
@@ -848,6 +868,7 @@
       }
     },
     {
+      "continente": "North America",
       "nombre": "Cuba",
       "energia": {
         "solar": {
@@ -894,6 +915,7 @@
       }
     },
     {
+      "continente": "North America",
       "nombre": "México",
       "energia": {
         "solar": {
@@ -984,8 +1006,10 @@
         "desc": "Energía renovable en las Bahamas"
       }
     },
-    "South America", "3 countries",
+    "South America",
+    "3 countries",
     {
+      "continente": "South America",
       "nombre": "Brasil",
       "energia": {
         "solar": {
@@ -1036,6 +1060,7 @@
       }
     },
     {
+      "continente": "South America",
       "nombre": "Argentina",
       "energia": {
         "solar": {
@@ -1083,6 +1108,7 @@
       }
     },
     {
+      "continente": "South America",
       "nombre": "Chile",
       "energia": {
         "solar": {
@@ -1129,8 +1155,10 @@
         "desc": "Energía renovable en Chile"
       }
     },
-    "Africa", "3 countries",
+    "Africa",
+    "3 countries",
     {
+      "continente": "Africa",
       "nombre": "Marruecos",
       "energia": {
         "solar": {
@@ -1177,6 +1205,7 @@
       }
     },
     {
+      "continente": "Africa",
       "nombre": "Egipto",
       "energia": {
         "solar": {
@@ -1223,6 +1252,7 @@
       }
     },
     {
+      "continente": "Africa",
       "nombre": "Libia",
       "energia": {
         "solar": {

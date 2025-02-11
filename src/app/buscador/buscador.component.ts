@@ -14,9 +14,14 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 
+export interface Continent {
+  value: string;
+  viewValue: string;
+}
 
 export interface Country {
   flag: string;
@@ -39,7 +44,8 @@ export interface Country {
     MatListModule,
     MatDividerModule,
     MatTabsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.css'
@@ -52,6 +58,7 @@ export class BuscadorComponent {
   filteredCountries: Observable<Country[]>;
   countries = countries;
   isActive: boolean = false;
+  selectedValue: string = '';
 
   constructor() {
     console.log(this.jsonData);
@@ -71,13 +78,13 @@ export class BuscadorComponent {
       const filtered = this._filterCountries(this.countCtrl.value || '');
       if (filtered.length === 1) {
         this.countCtrl.setValue(filtered[0].name);
-        event.preventDefault(); 
+        event.preventDefault();
       }
     }
-  } 
+  }
 
 
-  buscar() {
+  buscaPais() {
     const paisBuscado = this.countCtrl.value ?? '';
     console.log("Buscando: ", paisBuscado);
     const resultado = this.filtraPais(paisBuscado);
@@ -91,4 +98,36 @@ export class BuscadorComponent {
       item.nombre.toLowerCase() === paisBuscado.toLowerCase()
     );
   }
+
+  continents: Continent[] = [
+    { value: 'Europe', viewValue: 'Europa' },
+    { value: 'Asia', viewValue: 'Asia' },
+    { value: 'North America', viewValue: 'Norteamérica' },
+    { value: 'South America', viewValue: 'Sudamérica' },
+    { value: 'Africa', viewValue: 'África' }
+  ];
+  paisesPorContinente: string = '';
+
+  buscaContinente() {
+    console.log("Valor seleccionado:", this.selectedValue);
+  
+    if (!this.selectedValue) {
+      console.warn("No se ha seleccionado ningún continente.");
+      return;
+    }
+  
+    const resultado = this.filtraContinente(this.selectedValue);
+    this.paisesFiltrados = JSON.stringify(resultado, null, 2); // Mostrar en pantalla
+    console.log("Países encontrados:", resultado);
+  }
+  
+  filtraContinente(continenteSeleccionado: string) {
+    return this.jsonData.paises.filter((item: { continente?: string }) =>
+      typeof item === 'object' &&
+      item.continente?.toLowerCase() === continenteSeleccionado.toLowerCase()
+    );
+  }
+  
+
+
 }    

@@ -16,9 +16,17 @@
         </mat-autocomplete>
       </mat-form-field>
       
-      <button mat-stroked-button class="button" (click)="buscar()" >Buscar</button>
-
+      <button mat-stroked-button class="button" (click)="buscaPais()" >Buscar</button>
       <br>
+      <mat-form-field>
+        <mat-select [(ngModel)]="selectedValue" name="continent">
+          @for (continent of continents; track continent) {
+            <mat-option [value]="continent.value">{{continent.viewValue}}</mat-option>
+          }
+        </mat-select>
+        
+      </mat-form-field>
+      <button mat-stroked-button class="button" (click)="buscaContinente()">Buscar</button>
     </div>
 
     <mat-slide-toggle [checked]="countCtrl.disabled"
@@ -28,5 +36,6 @@
   </form>
   <div id="data">
     <pre>{{paisesFiltrados}}</pre>
+    <pre>{{paisesPorContinente}}</pre>
   </div>
 </div>
