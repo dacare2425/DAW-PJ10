@@ -19,13 +19,13 @@
       <button mat-stroked-button class="button" (click)="buscaPais()" >Buscar</button>
       <br>
       <mat-form-field>
-        <mat-select [(ngModel)]="selectedValue" name="continent">
+        <mat-select [(ngModel)]="selectedValue" name="continent" (selectionChange)="buscaContinente()">
           @for (continent of continents; track continent) {
             <mat-option [value]="continent.value">{{continent.viewValue}}</mat-option>
           }
         </mat-select>
-        
       </mat-form-field>
+      
       <button mat-stroked-button class="button" (click)="buscaContinente()">Buscar</button>
     </div>
 
