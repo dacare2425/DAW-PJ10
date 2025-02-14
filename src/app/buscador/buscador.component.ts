@@ -170,8 +170,7 @@ export class BuscadorComponent {
     this.paisesPorContinente = resultado.map((pais: { nombre?: string, imagen?: { src?: string }, poblacion?: string }) =>
       `<div>
         <img src="${pais.imagen?.src || ''}" height="25">
-        <span>${pais.nombre || 'Desconocido'}</span> |
-        <small>Población: ${pais.poblacion || 'N/A'}</small>
+        <span>${pais.nombre || 'Desconocido'}</span>
       </div>`
     ).join('');
   }

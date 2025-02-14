@@ -1,13 +1,11 @@
-<div>
-  <!-- <label for="search">Buscar:</label> -->
-  <!-- <input id="search" type="text" [(ngModel)]="textInput" placeholder="Buscar país"> -->
-
+<div class="search-container">
   <form class="example-form">
-    <div class="custom-input-container">
-      <mat-form-field appearance="fill" [ngClass]="{'custom-input': isActive}">
+    <div class="search-box">
+      <mat-form-field appearance="fill" class="custom-input">
         <mat-label>País</mat-label>
         <input class="input" #inputElement matInput aria-label="Country" [matAutocomplete]="auto" [formControl]="countCtrl"
-          (keydown)="onKeydown($event)"> <mat-autocomplete #auto="matAutocomplete">
+          (keydown)="onKeydown($event)"> 
+        <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name">
             <img alt="" [src]="country.flag" height="25">
             <span>{{ country.name }}</span> |
@@ -15,9 +13,10 @@
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
-      
-      <button mat-stroked-button class="button" (click)="buscaPais()" >Buscar</button>
-      <br>
+      <button mat-stroked-button class="button" (click)="buscaPais()">Buscar</button>
+    </div>
+
+    <div class="search-box">
       <mat-form-field>
         <mat-select [(ngModel)]="selectedValue" name="continent" (selectionChange)="buscaContinente()">
           @for (continent of continents; track continent) {
@@ -25,17 +24,17 @@
           }
         </mat-select>
       </mat-form-field>
-      
       <button mat-stroked-button class="button" (click)="buscaContinente()">Buscar</button>
     </div>
-
-    <mat-slide-toggle [checked]="countCtrl.disabled"
-      (change)="countCtrl.disabled ? countCtrl.enable() : countCtrl.disable()">
-      Desactivar entrada?
-    </mat-slide-toggle>
   </form>
-  <div id="data">
-    <div [innerHTML]="paisesFiltrados"></div>
-    <div [innerHTML]="paisesPorContinente"></div>
-  </div>  
+
+  <mat-slide-toggle [checked]="countCtrl.disabled"
+    (change)="countCtrl.disabled ? countCtrl.enable() : countCtrl.disable()">
+    Desactivar entrada?
+  </mat-slide-toggle>
+</div>
+
+<div id="data">
+  <div [innerHTML]="paisesFiltrados"></div>
+  <div [innerHTML]="paisesPorContinente"></div>
 </div>

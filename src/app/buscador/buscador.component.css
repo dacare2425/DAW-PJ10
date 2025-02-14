@@ -1,30 +1,74 @@
-.custom-input-container mat-form-field {
-    background-color: #00796b;
-    border-radius: 5px;
-    padding: 8px;
-    width: 30%;
+/* Contenedor de los buscadores en una misma línea */
+.example-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que se ajusten si la pantalla es pequeña */
 }
-.custom-input-container mat-label {
+
+/* Cada bloque de buscador */
+.custom-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    min-width: 300px;
+}
+
+/* Corrige el color del fondo del input */
+mat-form-field {
+    background-color: white !important;
+    width: 100%;
+}
+
+/* Corrige el color del texto dentro del input */
+mat-form-field input {
+    color: black !important;
+}
+
+/* REVERTIDO: Se mantiene el estilo de la información como antes */
+#data {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
     color: black;
 }
-.custom-input-container input.mat-input-element {
-    background-color: white !important;
-    color: white !important;
-    border-radius: 5px;
-    padding: 8px;
+
+/* Estilos adicionales restaurados para el texto de la información */
+#data h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.custom-input-container mat-option{
-    background-color: #00796b !important; /* Cambia el color de fondo */
-    color: white !important; /* Cambia el color del texto */
-  
+#data p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0;
 }
 
-.button{
-    background-color: #00796b;
+/* Estilo de botones */
+.button {
+    background-color: #00796b !important;
     color: white !important;
-    
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    width: 100%;
+    max-width: 150px;
 }
-.input{
-    background-color:white !important;
+
+.button:hover {
+    background-color: #005f56 !important;
 }
