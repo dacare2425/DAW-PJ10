@@ -824,6 +824,7 @@
             }
         },
         {
+            "continente": "North America",
             "nombre": "Canadá",
             "energia": {
                 "solar": {
@@ -966,6 +967,7 @@
             }
         },
         {
+            "continente": "North America",
             "nombre": "Las Bahamas",
             "energia": {
                 "solar": {

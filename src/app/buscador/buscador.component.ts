@@ -87,17 +87,67 @@ export class BuscadorComponent {
   buscaPais() {
     const paisBuscado = this.countCtrl.value ?? '';
     console.log("Buscando: ", paisBuscado);
-    const resultado = this.filtraPais(paisBuscado);
-    this.paisesFiltrados = JSON.stringify(resultado, null, 2);
-    console.log(resultado);
+    const resultado: { nombre?: string, imagen?: { src?: string }, poblacion?: string, continente?: string, energia?: any, impacto?: any }[] = this.filtraPais(paisBuscado);
+  
+    if (!resultado || resultado.length === 0) {
+      this.paisesFiltrados = `<p>No se encontraron resultados</p>`;
+      return;
+    }
+  
+    this.paisesFiltrados = resultado.map((pais) => `
+      <div>
+        <img src="${pais.imagen?.src || ''}" height="50">
+        <h3>${pais.nombre || 'Desconocido'}</h3>
+        <p><strong>Población:</strong> ${pais.poblacion || 'N/A'}</p>
+        <p><strong>Continente:</strong> ${pais.continente || 'No especificado'}</p>
+        
+        <h4>Energía</h4>
+        <ul>
+          <li><strong>Solar:</strong> ${pais.energia?.solar?.produccion_total_MWh || 0} MWh</li>
+          <li>Plantas: ${(pais.energia?.solar?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
+          
+          <li><strong>Eólica:</strong> ${pais.energia?.eolica?.produccion_total_MWh || 0} MWh</li>
+          <li>Plantas: ${(pais.energia?.eolica?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
+          
+          <li><strong>Hidráulica:</strong> ${pais.energia?.hidraulica?.produccion_total_MWh || 0} MWh</li>
+          <li>Plantas: ${(pais.energia?.hidraulica?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
+          
+          <li><strong>Biomasa:</strong> ${pais.energia?.biomasa?.produccion_total_MWh || 0} MWh</li>
+          <li>Plantas: ${(pais.energia?.biomasa?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
+        </ul>
+  
+        <h4>Impacto</h4>
+        <p><strong>Reducción de CO2:</strong> ${pais.impacto?.reduccion_gases_invernadero_tonCO2 || 0} toneladas</p>
+        <p><strong>Dependencia fósil:</strong> ${pais.impacto?.dependencia_combustibles_fosiles || 'Desconocida'}</p>
+        <p><strong>Políticas necesarias:</strong> ${(pais.impacto?.politicas_necesarias || []).join(', ') || 'Ninguna'}</p>
+  
+        <h4>Beneficios</h4>
+        <p><strong>Económicos:</strong> ${pais.impacto?.beneficios?.economicos || 'No especificado'}</p>
+        <p><strong>Medioambientales:</strong> ${pais.impacto?.beneficios?.medioambientales || 'No especificado'}</p>
+        <p><strong>Sociales:</strong> ${pais.impacto?.beneficios?.sociales || 'No especificado'}</p>
+      </div>
+    `).join('');
   }
+  
+  
+  
+  
+  
+  
+  
 
   filtraPais(paisBuscado: string) {
-    return this.jsonData.paises.filter((item: { nombre: string }) =>
-      typeof item === 'object' &&
+    if (!this.jsonData || !Array.isArray(this.jsonData.paises)) {
+      console.error("El JSON no tiene la estructura esperada");
+      return [];
+    }
+  
+    return this.jsonData.paises.filter((item: any) => 
+      item && item.nombre && typeof item.nombre === 'string' &&
       item.nombre.toLowerCase() === paisBuscado.toLowerCase()
     );
   }
+  
 
   continents: Continent[] = [
     { value: 'Europe', viewValue: 'Europa' },
@@ -116,10 +166,18 @@ export class BuscadorComponent {
       return;
     }
   
-    const resultado = this.filtraContinente(this.selectedValue);
-    this.paisesFiltrados = JSON.stringify(resultado, null, 2); // Mostrar en pantalla
-    console.log("Países encontrados:", resultado);
+    const resultado = this.filtraContinente(this.selectedValue);  
+    this.paisesPorContinente = resultado.map((pais: { nombre?: string, imagen?: { src?: string }, poblacion?: string }) =>
+      `<div>
+        <img src="${pais.imagen?.src || ''}" height="25">
+        <span>${pais.nombre || 'Desconocido'}</span> |
+        <small>Población: ${pais.poblacion || 'N/A'}</small>
+      </div>`
+    ).join('');
   }
+  
+  
+  
   
   filtraContinente(continenteSeleccionado: string) {
     return this.jsonData.paises.filter((item: { continente?: string }) =>
