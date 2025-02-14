@@ -5,7 +5,6 @@ import { HidraulicaComponent } from './hidraulica/hidraulica.component';
 import { SolarComponent } from './solar/solar.component';
 import { EolicaComponent } from './eolica/eolica.component';
 import { BuscadorComponent } from './buscador/buscador.component';
-import { MaterialComponent } from './material-design/material-design.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +13,5 @@ export const routes: Routes = [
   { path: 'hidraulica', component: HidraulicaComponent},
   { path: 'solar', component: SolarComponent},
   { path: 'eolica', component: EolicaComponent},
-  {path: 'buscador', component: BuscadorComponent},
-  {path: 'material', component: MaterialComponent}
+  {path: 'buscador', component: BuscadorComponent}
 ];
