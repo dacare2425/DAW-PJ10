@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './biomassa.component.css'
 })
 export class BiomassaComponent {
-  isActive: boolean = false;
 
   @ViewChild(MatTabGroup) tabGroup!: MatTabGroup;
 
