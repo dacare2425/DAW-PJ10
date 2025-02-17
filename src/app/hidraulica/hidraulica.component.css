@@ -24,7 +24,7 @@
 }
 
 .about-section.light-background {
-    background-color: #e0f7fa; /* Azul agua para hidráulica */
+    background-color: #e0f7fa;
 }
 
 .about-section.dark-background {
@@ -48,7 +48,6 @@
     line-height: 1.6;
 }
 
-/* Estilos para tabs de energía hidráulica */
 mat-tab-group {
     display: flex;
     flex-direction: column;
@@ -56,7 +55,7 @@ mat-tab-group {
 }
 
 mat-tab {
-    background-color: #0288d1; /* Azul agua */
+    background-color: #0288d1;
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -66,7 +65,7 @@ mat-tab:hover {
     background-color: #03a9f4;
 }
 
-/* Contenedor de contenido de pestañas */
+
 .tab-content-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -76,7 +75,6 @@ mat-tab:hover {
     padding: 20px;
 }
 
-/* Texto y citas en pestañas */
 .tab-text-container p,
 .tab-quote-container blockquote {
     font-size: 1.2rem;
