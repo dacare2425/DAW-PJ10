@@ -93,6 +93,7 @@ export class BuscadorComponent {
       this.paisesFiltrados = `<p>No se encontraron resultados</p>`;
       return;
     }
+    this.paisesPorContinente = '';
   
     this.paisesFiltrados = resultado.map((pais) => `
       <div>
@@ -158,7 +159,9 @@ export class BuscadorComponent {
       console.warn("No se ha seleccionado ningún continente.");
       return;
     }
-  
+    
+    this.paisesFiltrados = '';
+
     const resultado = this.filtraContinente(this.selectedValue);  
     this.paisesPorContinente = resultado.map((pais: { nombre?: string, imagen?: { src?: string }, poblacion?: string }) =>
       `<div>
