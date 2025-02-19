@@ -18,7 +18,8 @@
 
     <div class="search-box">
       <mat-form-field>
-        <mat-select [(ngModel)]="selectedValue" name="continent" (selectionChange)="buscaContinente()">
+        <mat-label>Continente</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="continent">
           @for (continent of continents; track continent) {
             <mat-option [value]="continent.value">{{continent.viewValue}}</mat-option>
           }

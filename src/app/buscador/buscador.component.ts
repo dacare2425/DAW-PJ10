@@ -128,13 +128,6 @@ export class BuscadorComponent {
       </div>
     `).join('');
   }
-  
-  
-  
-  
-  
-  
-  
 
   filtraPais(paisBuscado: string) {
     if (!this.jsonData || !Array.isArray(this.jsonData.paises)) {
