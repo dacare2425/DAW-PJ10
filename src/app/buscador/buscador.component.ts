@@ -136,7 +136,7 @@ export class BuscadorComponent {
       return;
     }
 
-    this.paisesPorContinente = ''; // Limpiar resultados de continente
+    this.paisesPorContinente = '';
     this.paisesFiltrados = resultado.map((pais: {
       nombre?: string,
       imagen?: { src?: string },
@@ -204,6 +204,13 @@ export class BuscadorComponent {
     );
   }
 
-
-
+  
+  limpieza() {
+    this.countCtrl.setValue('');
+    this.selectedValue = '';
+  
+    this.paisesFiltrados = '';
+    this.paisesPorContinente = '';
+  }
+  
 }    
