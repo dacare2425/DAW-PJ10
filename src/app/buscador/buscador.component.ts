@@ -83,19 +83,15 @@ export class BuscadorComponent {
     }
   }
 
-
-  buscaPais() {
-    const paisBuscado = this.countCtrl.value ?? '';
-    console.log("Buscando: ", paisBuscado);
-    const resultado: { nombre?: string, imagen?: { src?: string }, poblacion?: string, continente?: string, energia?: any, impacto?: any }[] = this.filtraPais(paisBuscado);
-  
-    if (!resultado || resultado.length === 0) {
-      this.paisesFiltrados = `<p>No se encontraron resultados</p>`;
-      return;
-    }
-    this.paisesPorContinente = '';
-  
-    this.paisesFiltrados = resultado.map((pais) => `
+  generarHTMLPais(pais: {
+    nombre?: string,
+    imagen?: { src?: string },
+    poblacion?: string,
+    continente?: string,
+    energia?: any,
+    impacto?: any
+  }): string {
+    return `
       <div>
         <img src="${pais.imagen?.src || ''}" height="50">
         <h3>${pais.nombre || 'Desconocido'}</h3>
@@ -127,7 +123,29 @@ export class BuscadorComponent {
         <p><strong>Medioambientales:</strong> ${pais.impacto?.beneficios?.medioambientales || 'No especificado'}</p>
         <p><strong>Sociales:</strong> ${pais.impacto?.beneficios?.sociales || 'No especificado'}</p>
       </div>
-    `).join('');
+    `;
+  }
+
+
+  buscaPais() {
+    const paisBuscado = this.countCtrl.value ?? '';
+    console.log("Buscando: ", paisBuscado);
+    const resultado = this.filtraPais(paisBuscado);
+
+    if (!resultado || resultado.length === 0) {
+      this.paisesFiltrados = `<p>No se encontraron resultados</p>`;
+      return;
+    }
+
+    this.paisesPorContinente = ''; // Limpiar resultados de continente
+    this.paisesFiltrados = resultado.map((pais: {
+      nombre?: string,
+      imagen?: { src?: string },
+      poblacion?: string,
+      continente?: string,
+      energia?: any,
+      impacto?: any
+    }) => this.generarHTMLPais(pais)).join('');
   }
 
   filtraPais(paisBuscado: string) {
@@ -135,13 +153,13 @@ export class BuscadorComponent {
       console.error("El JSON no tiene la estructura esperada");
       return [];
     }
-  
-    return this.jsonData.paises.filter((item: any) => 
+
+    return this.jsonData.paises.filter((item: any) =>
       item && item.nombre && typeof item.nombre === 'string' &&
       item.nombre.toLowerCase() === paisBuscado.toLowerCase()
     );
   }
-  
+
 
   continents: Continent[] = [
     { value: 'Europe', viewValue: 'Europa' },
@@ -154,33 +172,39 @@ export class BuscadorComponent {
 
   buscaContinente() {
     console.log("Valor seleccionado:", this.selectedValue);
-  
+
     if (!this.selectedValue) {
       console.warn("No se ha seleccionado ningún continente.");
       return;
     }
-    
-    this.paisesFiltrados = '';
 
-    const resultado = this.filtraContinente(this.selectedValue);  
-    this.paisesPorContinente = resultado.map((pais: { nombre?: string, imagen?: { src?: string }, poblacion?: string }) =>
-      `<div>
-        <img src="${pais.imagen?.src || ''}" height="25">
-        <span>${pais.nombre || 'Desconocido'}</span>
-      </div>`
-    ).join('');
+    this.paisesFiltrados = ''; // Limpiar resultados de país
+    const resultado = this.filtraContinente(this.selectedValue);
+
+    if (!resultado || resultado.length === 0) {
+      this.paisesPorContinente = `<p>No se encontraron países para este continente</p>`;
+      return;
+    }
+
+    this.paisesPorContinente = resultado.map((pais: {
+      nombre?: string,
+      imagen?: { src?: string },
+      poblacion?: string,
+      continente?: string,
+      energia?: any,
+      impacto?: any
+    }) => this.generarHTMLPais(pais)).join('');
   }
-  
-  
-  
-  
+
+
+
   filtraContinente(continenteSeleccionado: string) {
     return this.jsonData.paises.filter((item: { continente?: string }) =>
       typeof item === 'object' &&
       item.continente?.toLowerCase() === continenteSeleccionado.toLowerCase()
     );
   }
-  
+
 
 
 }    
