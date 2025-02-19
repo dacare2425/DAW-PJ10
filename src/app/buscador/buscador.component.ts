@@ -95,7 +95,6 @@ export class BuscadorComponent {
       <div>
         <img src="${pais.imagen?.src || ''}" height="50">
         <h3>${pais.nombre || 'Desconocido'}</h3>
-        <p><strong>Población:</strong> ${pais.poblacion || 'N/A'}</p>
         <p><strong>Continente:</strong> ${pais.continente || 'No especificado'}</p>
         
         <h4>Energía</h4>
