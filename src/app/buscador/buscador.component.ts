@@ -93,7 +93,8 @@ export class BuscadorComponent {
       this.paisesFiltrados = `<p>No se encontraron resultados</p>`;
       return;
     }
-    this.paisesPorContinente = "";
+    this.paisesPorContinente = '';
+  
     this.paisesFiltrados = resultado.map((pais) => `
       <div>
         <img src="${pais.imagen?.src || ''}" height="50">
@@ -129,6 +130,13 @@ export class BuscadorComponent {
     `).join('');
   }
   
+  
+  
+  
+  
+  
+  
+
   filtraPais(paisBuscado: string) {
     if (!this.jsonData || !Array.isArray(this.jsonData.paises)) {
       console.error("El JSON no tiene la estructura esperada");
@@ -158,9 +166,9 @@ export class BuscadorComponent {
       console.warn("No se ha seleccionado ningún continente.");
       return;
     }
+    
     this.paisesFiltrados = '';
 
-  
     const resultado = this.filtraContinente(this.selectedValue);  
     this.paisesPorContinente = resultado.map((pais: { nombre?: string, imagen?: { src?: string }, poblacion?: string }) =>
       `<div>
