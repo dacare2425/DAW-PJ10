@@ -1,19 +1,17 @@
-/* Contenedor de los buscadores en una misma línea */
 .example-form {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
-    flex-wrap: wrap; /* Permite que se ajusten si la pantalla es pequeña */
+    flex-wrap: wrap; 
 }
 
-/* Cada bloque de buscador */
 .custom-input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff;
     padding: 16px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,18 +19,15 @@
     min-width: 300px;
 }
 
-/* Corrige el color del fondo del input */
 mat-form-field {
     background-color: white !important;
     width: 100%;
 }
 
-/* Corrige el color del texto dentro del input */
 mat-form-field input {
     color: black !important;
 }
 
-/* REVERTIDO: Se mantiene el estilo de la información como antes */
 #data {
     margin-top: 20px;
     padding: 10px;
@@ -42,7 +37,6 @@ mat-form-field input {
     color: black;
 }
 
-/* Estilos adicionales restaurados para el texto de la información */
 #data h2 {
     font-size: 24px;
     font-weight: bold;
@@ -55,7 +49,6 @@ mat-form-field input {
     margin: 5px 0;
 }
 
-/* Estilo de botones */
 .button {
     background-color: #00796b !important;
     color: white !important;

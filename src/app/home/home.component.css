@@ -55,8 +55,8 @@ a[href='/solar']:hover {
     margin-top: 20px;
     padding: 1rem;
     width: 100%;
-    max-height: 70vh; /* Limita la altura total */
-    overflow-y: auto; /* Permite scroll si hay muchas cartas */
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .column {
@@ -67,12 +67,11 @@ a[href='/solar']:hover {
     position: relative;
     perspective: 1000px;
     cursor: pointer;
-    min-height: 250px; /* Ajustado para que sea más flexible */
+    min-height: 250px; 
     margin: 10px;
-        min-height: 250px; /* Tamaño mínimo */
-        max-height: 400px; /* Tamaño máximo */
-        flex: 1; /* Se ajusta sin desbordar */
-    
+        min-height: 250px;
+        max-height: 400px;
+        flex: 1;
     
 }
 
@@ -199,7 +198,7 @@ button[routerLink]:hover {
 .about-section {
     padding: 50px 0;
     text-align: center;
-    margin-top: 30px; /* Espacio extra entre las cartas y la sección */
+    margin-top: 30px;
 }
 
 .about-section img {
