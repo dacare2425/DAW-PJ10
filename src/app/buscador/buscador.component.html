@@ -37,7 +37,16 @@
   </mat-slide-toggle> -->
 </div>
 
-<div id="data">
+
+<div *ngIf="paisesFiltrados.length">
+  <div *ngFor="let pais of paisesFiltrados" [innerHTML]="pais | jsonHtml"></div>
+</div>
+  <div *ngIf="paisesPorContinente.length">
+    <div *ngFor="let pais of paisesPorContinente" [innerHTML]="pais | jsonHtml"></div>
+  </div>
+
+<!-- <div id="data">
   <div [innerHTML]="paisesFiltrados"></div>
   <div [innerHTML]="paisesPorContinente"></div>
 </div>
+ -->

@@ -16,7 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-
+import { JsonHtmlPipe } from '../json-html.pipe';
 
 export interface Continent {
   value: string;
@@ -33,6 +33,7 @@ export interface Country {
   selector: 'app-buscador',
   standalone: true,
   imports: [
+    JsonHtmlPipe,
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
@@ -53,7 +54,7 @@ export interface Country {
 export class BuscadorComponent {
   textInput: string = '';
   jsonData = (data as any).default;
-  paisesFiltrados: string = '';
+  paisesFiltrados: any[] = []; // Cambiado a any[]
   countCtrl = new FormControl('');
   filteredCountries: Observable<Country[]>;
   countries = countries;
@@ -67,6 +68,7 @@ export class BuscadorComponent {
       map(country => (country ? this._filterCountries(country) : this.countries.slice())),
     );
   }
+
   private _filterCountries(value: string): Country[] {
     const filterValue = value.toLowerCase();
     return this.countries.filter(country => country.name.toLowerCase().includes(filterValue));
@@ -83,68 +85,18 @@ export class BuscadorComponent {
     }
   }
 
-  generarHTMLPais(pais: {
-    nombre?: string,
-    imagen?: { src?: string },
-    poblacion?: string,
-    continente?: string,
-    energia?: any,
-    impacto?: any
-  }): string {
-    return `
-      <div>
-        <img src="${pais.imagen?.src || ''}" height="50">
-        <h3>${pais.nombre || 'Desconocido'}</h3>
-        <p><strong>Continente:</strong> ${pais.continente || 'No especificado'}</p>
-        
-        <h4>Energía</h4>
-        <ul>
-          <li><strong>Solar:</strong> ${pais.energia?.solar?.produccion_total_MWh || 0} MWh</li>
-          <li>Plantas: ${(pais.energia?.solar?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
-          
-          <li><strong>Eólica:</strong> ${pais.energia?.eolica?.produccion_total_MWh || 0} MWh</li>
-          <li>Plantas: ${(pais.energia?.eolica?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
-          
-          <li><strong>Hidráulica:</strong> ${pais.energia?.hidraulica?.produccion_total_MWh || 0} MWh</li>
-          <li>Plantas: ${(pais.energia?.hidraulica?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
-          
-          <li><strong>Biomasa:</strong> ${pais.energia?.biomasa?.produccion_total_MWh || 0} MWh</li>
-          <li>Plantas: ${(pais.energia?.biomasa?.plantas_principales || []).join(', ') || 'Ninguna'}</li>
-        </ul>
-  
-        <h4>Impacto</h4>
-        <p><strong>Reducción de CO2:</strong> ${pais.impacto?.reduccion_gases_invernadero_tonCO2 || 0} toneladas</p>
-        <p><strong>Dependencia fósil:</strong> ${pais.impacto?.dependencia_combustibles_fosiles || 'Desconocida'}</p>
-        <p><strong>Políticas necesarias:</strong> ${(pais.impacto?.politicas_necesarias || []).join(', ') || 'Ninguna'}</p>
-  
-        <h4>Beneficios</h4>
-        <p><strong>Económicos:</strong> ${pais.impacto?.beneficios?.economicos || 'No especificado'}</p>
-        <p><strong>Medioambientales:</strong> ${pais.impacto?.beneficios?.medioambientales || 'No especificado'}</p>
-        <p><strong>Sociales:</strong> ${pais.impacto?.beneficios?.sociales || 'No especificado'}</p>
-      </div>
-    `;
-  }
-
-
   buscaPais() {
     const paisBuscado = this.countCtrl.value ?? '';
     console.log("Buscando: ", paisBuscado);
     const resultado = this.filtraPais(paisBuscado);
 
     if (!resultado || resultado.length === 0) {
-      this.paisesFiltrados = `<p>No se encontraron resultados</p>`;
+      this.paisesFiltrados = []; // Limpiar resultados
       return;
     }
 
-    this.paisesPorContinente = '';
-    this.paisesFiltrados = resultado.map((pais: {
-      nombre?: string,
-      imagen?: { src?: string },
-      poblacion?: string,
-      continente?: string,
-      energia?: any,
-      impacto?: any
-    }) => this.generarHTMLPais(pais)).join('');
+    this.paisesPorContinente = []; // Limpiar resultados de continente
+    this.paisesFiltrados = resultado; // Almacenar el objeto JSON
   }
 
   filtraPais(paisBuscado: string) {
@@ -159,7 +111,6 @@ export class BuscadorComponent {
     );
   }
 
-
   continents: Continent[] = [
     { value: 'Europe', viewValue: 'Europa' },
     { value: 'Asia', viewValue: 'Asia' },
@@ -167,7 +118,7 @@ export class BuscadorComponent {
     { value: 'South America', viewValue: 'Sudamérica' },
     { value: 'Africa', viewValue: 'África' }
   ];
-  paisesPorContinente: string = '';
+  paisesPorContinente: any[] = []; // Cambiado a any[]
 
   buscaContinente() {
     console.log("Valor seleccionado:", this.selectedValue);
@@ -177,25 +128,16 @@ export class BuscadorComponent {
       return;
     }
 
-    this.paisesFiltrados = ''; // Limpiar resultados de país
+    this.paisesFiltrados = []; // Limpiar resultados de país
     const resultado = this.filtraContinente(this.selectedValue);
 
     if (!resultado || resultado.length === 0) {
-      this.paisesPorContinente = `<p>No se encontraron países para este continente</p>`;
+      this.paisesPorContinente = []; // Limpiar resultados
       return;
     }
 
-    this.paisesPorContinente = resultado.map((pais: {
-      nombre?: string,
-      imagen?: { src?: string },
-      poblacion?: string,
-      continente?: string,
-      energia?: any,
-      impacto?: any
-    }) => this.generarHTMLPais(pais)).join('');
+    this.paisesPorContinente = resultado; // Almacenar el objeto JSON
   }
-
-
 
   filtraContinente(continenteSeleccionado: string) {
     return this.jsonData.paises.filter((item: { continente?: string }) =>
@@ -204,13 +146,10 @@ export class BuscadorComponent {
     );
   }
 
-  
   limpieza() {
     this.countCtrl.setValue('');
     this.selectedValue = '';
-  
-    this.paisesFiltrados = '';
-    this.paisesPorContinente = '';
+    this.paisesFiltrados = [];
+    this.paisesPorContinente = [];
   }
-  
-}    
+}
